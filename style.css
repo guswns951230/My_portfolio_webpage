@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  /* 스크롤바 숨기기 */
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+article {
+  text-align: center;
+}
+.Container {
+  /* width: 100%;
+  max-width: 80rem; */
+  /* padding: 4rem 2rem; */
+  width: 80%;
+  padding: 4% 2%;
+  margin: 0 auto;
+}
+.SectionTitle {
+  display: table;
+  position: relative;
+  margin: 0 auto 3rem;
+}
+.SectionTitle_text {
+  font-family: "Black Han Sans", sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 1.5;
+  border-bottom: 1.7px solid #cccccc;
+}
+
+/* --------------- Header --------------- */
+#nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: 10;
+}
+#nav.nav--dark {
+  background-color: black;
+  box-shadow: 0 1px 0.3rem;
+}
+.Nav_container {
+  width: 80%;
+  box-sizing: border-box;
+  padding: 1.25rem 2rem;
+  margin: 0 auto;
+}
+.Nav_navbar {
+  color: white;
+  float: right;
+}
+.Nav_logo {
+  color: white;
+  display: inline-block;
+  transition: 0.3s;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.Nav_logo-icon {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.Nav_logo-icon::before {
+  padding-right: 0.7rem;
+}
+.Navbar_menu {
+  display: inline-block;
+  padding: 0 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 0.8;
+}
+.Navbar_menu:hover,
+.Nav_logo:hover {
+  opacity: 1;
+}
+
+/* --------------- Home --------------- */
+#home {
+  background: url("images/background.png") center/cover no-repeat;
+  height: 100vh;
+}
+
+.Home_img1 {
+  position: absolute;
+  width: 25%;
+  bottom: 5%;
+  right: 5%;
+  animation: up-down 2s infinite ease-in-out alternate;
+}
+@keyframes up-down {
+  from {
+    transform: translatey(0px);
+  }
+  to {
+    transform: translatey(-40px);
+  }
+}
+
+.Home_container {
+  position: absolute;
+  width: 80%;
+  padding: 5%;
+  margin: 0 5%;
+}
+.Home_avatar {
+  width: 15rem;
+  height: 15rem;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  box-shadow: 10px 10px 70px 8px;
+  margin: 3rem auto 4rem;
+  background: url("/images/avatar2.jpg") center;
+  background-size: 25rem;
+  transform: scaleX(-1) rotate(-15deg);
+}
+
+.Home_title {
+  font-family: "Black Han Sans", sans-serif;
+  font-weight: 400;
+  color: #f0e6ee;
+  font-size: 4rem;
+}
+.Home_divider {
+  display: block;
+  width: 4rem;
+  border: 0.15rem solid #f4623a;
+  margin: 2rem auto;
+}
+.Home_description {
+  color: #f0e6ee;
+  font-size: 1.25rem;
+  margin: 0 auto 2rem;
+}
+.Home_nextbtn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10rem;
+  background-color: #f4623a;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #f0e6ee;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.Home_nextbtn:hover {
+  padding: 1.05rem 2.1rem;
+  font-size: 1.05rem;
+  background-color: #f5400f;
+}
