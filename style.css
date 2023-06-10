@@ -157,3 +157,49 @@ article {
   font-size: 1.05rem;
   background-color: #f5400f;
 }
+/* --------------- About Me --------------- */
+/* .AboutMe_container {
+  width: 100%;
+  max-width: 80rem;
+  padding: 4rem 2rem;
+  margin: 0 auto;
+} */
+
+.AboutMe_infos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  opacity: 0.8;
+}
+.AboutMe_info-wrapper {
+  display: block;
+  text-align: left;
+  width: 33.3333%;
+  margin-bottom: 3rem;
+}
+.AboutMe_info {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  max-width: 16rem;
+  margin: 0 auto;
+}
+.AboutMe_icon {
+  width: 3rem;
+  min-width: 3rem;
+  height: 3rem;
+  margin-top: 0.2rem;
+  margin-right: 2rem;
+}
+.AboutMe_icon-img {
+  font-size: 2.3rem;
+}
+.AboutMe_field-label {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.AboutMe_field-value {
+  font-size: 1rem;
+  font-weight: 400;
+}
