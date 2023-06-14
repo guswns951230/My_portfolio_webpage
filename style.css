@@ -32,6 +32,19 @@ article {
   border-bottom: 1.7px solid #cccccc;
 }
 
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ul {
+  padding-left: 1rem;
+  margin: 0;
+}
+li {
+  margin-bottom: 0.5rem;
+}
+
 /* --------------- Header --------------- */
 #nav {
   position: fixed;
@@ -218,6 +231,34 @@ article {
 }
 .Archiving_title {
   color: white;
+}
+.Archiving_git-hub-container {
+  text-align: left;
+  width: 35%;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 2rem;
+  background-color: #f5f5f5;
+}
+.Archiving_git-hub {
+  text-decoration: none;
+  cursor: pointer;
+}
+.Archiving_img-wrapper {
+  display: block;
+  width: 12rem;
+  margin-bottom: 1rem;
+}
+.Archiving_img {
+  width: 100%;
+}
+.Archiving_url {
+  margin-bottom: 1rem;
+  color: #258ddb;
+}
+.Archiving_description {
+  font-size: 1.3rem;
+  color: #444;
 }
 
 /* --------------- Projects --------------- */
