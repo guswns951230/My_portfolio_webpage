@@ -73,6 +73,9 @@ li {
   opacity: 0.8;
   cursor: pointer;
 }
+.Nav_logo-a {
+  color: white;
+}
 .Nav_logo-icon {
   font-size: 1.6rem;
   font-weight: 700;
@@ -365,6 +368,33 @@ li {
   text-decoration: none;
   word-break: break-all;
 }
+
+/* --------------- page up btn --------------- */
+.PageUpBtn {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  background-color: white;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  display: none;
+}
+.PageUpBtn_icon {
+  width: 100%;
+  vertical-align: middle;
+}
+.PageUpBtn:hover {
+  opacity: 0.9;
+}
+.PageUpBtn.visible {
+  display: block;
+}
+
 /* --------------- footer --------------- */
 #footer {
   height: 10rem;

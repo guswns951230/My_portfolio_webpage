@@ -35,11 +35,10 @@
           <i class="fas fa-meteor Nav_logo-icon">KHJ's Portfolio</i>
         </div>
         <div class="Nav_navbar">
-          <div class="Navbar_menu">About me</div>
-          <div class="Navbar_menu">Skills</div>
-          <div class="Navbar_menu">Projects</div>
-          <div class="Navbar_menu">Contact</div>
-          <!-- 메뉴 클릭시 해당 section으로 이동 이벤트 추가하기 -->
+          <div class="Navbar_menu aboutMe" data-link="#about-me">About me</div>
+          <div class="Navbar_menu skills" data-link="#skills">Skills</div>
+          <div class="Navbar_menu" data-link="#archiving">Archiving</div>
+          <div class="Navbar_menu" data-link="#projects">Projects</div>
         </div>
       </div>
     </header>
@@ -420,6 +419,14 @@
         </div>
       </div>
     </article>
+
+    <div class="PageUpBtn">
+      <img
+        src="images/arrow-up.png"
+        alt="arrow up btn"
+        class="PageUpBtn_icon"
+      />
+    </div>
 
     <footer id="footer">
       <div class="Footer_icons">
