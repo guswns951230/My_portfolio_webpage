@@ -4,12 +4,18 @@ history.scrollRestoration = "auto";
 
 // scroll시 navbar background color 변경
 const header = document.querySelector("#nav");
+const navLogo = document.querySelector(".Nav_logo");
+const navMenu = document.querySelector(".Nav_navbar");
 const headerHeight = header.getBoundingClientRect().height - 10;
 document.addEventListener("scroll", () => {
   if (window.scrollY > headerHeight) {
     header.classList.add("nav--dark");
+    navLogo.classList.add("logo--dark");
+    navMenu.classList.add("navbar--dark");
   } else {
     header.classList.remove("nav--dark");
+    navLogo.classList.remove("logo--dark");
+    navMenu.classList.remove("navbar--dark");
   }
 });
 

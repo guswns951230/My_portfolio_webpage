@@ -1,6 +1,22 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Pretendard-Regular", sans-serif;
   /* 스크롤바 숨기기 */
   -ms-overflow-style: none;
 }
@@ -14,20 +30,19 @@ article {
 .Container {
   width: 80%;
   max-width: 71rem;
-  padding: 4% 2%;
+  padding: 8rem 2% 4rem;
   margin: 0 auto;
 }
 .SectionTitle {
   display: table;
   position: relative;
-  margin: 0 auto 3rem;
+  margin: 0 auto 4rem;
 }
 .SectionTitle_text {
-  font-family: "Black Han Sans", sans-serif;
-  font-weight: 400;
+  font-family: "GmarketSansMedium", sans-serif;
+  font-weight: 700;
   font-size: 3rem;
   line-height: 1.5;
-  border-bottom: 1.7px solid #cccccc;
 }
 
 p {
@@ -53,8 +68,8 @@ li {
   z-index: 10;
 }
 #nav.nav--dark {
-  background-color: black;
-  box-shadow: 0 1px 0.3rem;
+  background-color: rgb(255, 246, 228);
+  /* box-shadow: 0 1px 0.3rem; */
 }
 .Nav_container {
   width: 80%;
@@ -63,62 +78,49 @@ li {
   margin: 0 auto;
 }
 .Nav_navbar {
-  color: white;
+  color: rgb(255, 246, 228);
+  /* font-weight: 400; */
   float: right;
 }
+.Nav_navbar.navbar--dark {
+  color: #003b1b;
+}
+.Nav_logo.logo--dark {
+  color: #003b1b;
+}
 .Nav_logo {
-  color: white;
+  color: rgb(255, 246, 228);
   display: inline-block;
-  transition: 0.3s;
-  opacity: 0.8;
   cursor: pointer;
 }
-.Nav_logo-a {
-  color: white;
-}
+
 .Nav_logo-icon {
   font-size: 1.6rem;
-  font-weight: 700;
 }
 .Nav_logo-icon::before {
   padding-right: 0.7rem;
 }
-.Navbar_menu {
+
+.Nav_menu {
   display: inline-block;
+
   padding: 0 1rem;
   line-height: 1.5rem;
-  font-weight: 700;
   cursor: pointer;
   transition: 0.3s;
-  opacity: 0.8;
+  /* opacity: 0.8; */
 }
-.Navbar_menu:hover,
-.Nav_logo:hover {
-  opacity: 1;
+
+.Nav_menu:hover {
+  color: #ffc107;
 }
 
 /* --------------- Home --------------- */
-#home {
-  background: linear-gradient(
-      180deg,
-      rgba(153, 102, 204, 0.3) 0,
-      rgba(153, 102, 204, 0.3) 90%
-    ),
-    url("images/background.png") center/cover no-repeat;
-  height: 100vh;
-}
-.Home_container {
-  width: 80%;
-  padding: 4% 2%;
-  margin: 0 auto;
-}
-.Home_img1 {
-  position: absolute;
-  width: 25%;
-  bottom: 5%;
-  right: 5%;
+/* 움직이는 이미지 */
+/* .Home_img-wrapper {
   animation: up-down 2s infinite ease-in-out alternate;
 }
+
 @keyframes up-down {
   from {
     transform: translatey(0px);
@@ -126,29 +128,35 @@ li {
   to {
     transform: translatey(-40px);
   }
-}
-.Home_container {
-  position: absolute;
-  width: 80%;
-  padding: 5%;
-  margin: 0 5%;
+} */
+#home {
+  /* background: 
+  linear-gradient(
+      180deg,
+      rgba(153, 102, 204, 0.3) 0,
+      rgba(153, 102, 204, 0.3) 90%
+    ), url("images/background.png")
+    center/cover no-repeat; */
+  background-color: #003b1b;
 }
 .Home_avatar {
   width: 15rem;
   height: 15rem;
   border: 2px solid transparent;
   border-radius: 50%;
-  box-shadow: 10px 10px 70px 8px;
   margin: 3rem auto 4rem;
-  background: url("/images/avatar2.jpg") center;
+  background-color: rgb(255, 246, 228);
+  /* background: url("/images/avatar2.jpg") center;
   background-size: 25rem;
-  transform: scaleX(-1) rotate(-15deg);
+  transform: scaleX(-1) rotate(-15deg); */
+  /* box-shadow: 10px 10px 70px 8px; */
 }
 .Home_title {
-  font-family: "Black Han Sans", sans-serif;
-  font-weight: 400;
-  color: #f0e6ee;
+  font-family: "GmarketSansMedium", sans-serif;
+  color: rgb(255, 246, 228);
   font-size: 4rem;
+  margin-bottom: 4rem;
+  font-weight: 700;
 }
 .Home_divider {
   display: block;
@@ -157,38 +165,37 @@ li {
   margin: 2rem auto;
 }
 .Home_description {
-  color: #f0e6ee;
+  color: rgb(255, 246, 228);
   font-size: 1.25rem;
-  margin: 0 auto 2rem;
+  margin: 0 auto 4rem;
 }
 .Home_nextbtn {
   display: inline-block;
-  padding: 1rem 2rem;
+  padding: 0.7rem 2rem;
   border: none;
   border-radius: 10rem;
-  background-color: #f4623a;
+  background-color: rgb(255, 246, 228);
   font-size: 1rem;
-  font-weight: bold;
-  color: #f0e6ee;
+  font-weight: 700;
+  color: #003b1b;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
 .Home_nextbtn:hover {
-  padding: 1.05rem 2.1rem;
-  font-size: 1.05rem;
-  background-color: #f5400f;
+  background-color: #ffc107;
 }
 
 /* --------------- About Me --------------- */
-/* .AboutMe_container {
-  width: 100%;
-  max-width: 80rem;
-  padding: 4rem 2rem;
-  margin: 0 auto;
-} */
+#about-me {
+  background-color: rgb(255, 246, 228);
+}
+.AboutMe_section-title-text {
+  color: #003b1b;
+}
 .AboutMe_infos {
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
+  /* flex-wrap: wrap; */
   justify-content: space-between;
   opacity: 0.8;
 }
@@ -227,50 +234,56 @@ li {
 
 /* --------------- Skills --------------- */
 #skills {
-  background-color: #2c1b60;
+  background-color: #b6daae;
 }
 .Skills_title {
-  color: white;
+  color: #003b1b;
 }
 .Skills_tech-stacks-container {
   display: flex;
-  justify-content: space-between;
+  flex-flow: row wrap;
 }
 .Skills_tech-stacks {
   width: 17rem;
   padding: 1.5rem;
   margin: 0 auto 2rem;
   border-radius: 1rem;
-  background-color: white;
-  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.7);
+  background-color: rgb(255, 246, 228);
+  /* box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.7); */
 }
 .Skills_stacks-title {
+  margin: 1.5rem 0;
   padding-bottom: 0.5rem;
-  margin-bottom: 1.5rem;
-  border-bottom: 1px solid #ccc;
+
+  /* border-bottom: 1px solid #ccc; */
   font-size: 1.5rem;
   font-weight: 700;
-  color: #f4623a;
+  color: #003b1b;
+}
+.Skills_img {
+  display: block;
+  width: 100%;
 }
 
 /* --------------- archiving --------------- */
 #archiving {
-  background-color: #222222;
+  /* background-color: #222222; */
+  background-color: rgb(255, 246, 228);
 }
 .Archiving_title {
-  color: white;
+  color: #003b1b;
 }
 .Archiving_git-hub {
   display: block;
   text-align: left;
-  width: 35rem;
+  width: 50%;
   padding: 2rem;
   margin: 0 auto 2rem;
   border-radius: 2rem;
-  background-color: #f5f5f5;
+  background-color: #003b1b;
   text-decoration: none;
   cursor: pointer;
-  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.8);
+  /* box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.8); */
 }
 .Archiving_img-wrapper {
   display: block;
@@ -282,31 +295,31 @@ li {
 }
 .Archiving_url {
   margin-bottom: 1rem;
-  color: #258ddb;
+  color: #ffc107;
 }
 .Archiving_description {
   font-size: 1.3rem;
-  color: #444;
+  color: rgb(255, 246, 228);
 }
 
 /* --------------- Projects --------------- */
 #projects {
-  background-color: #ffc107;
+  background-color: #b6daae;
 }
 .Projects_section-title {
-  border-bottom: 1.7px solid black;
+  color: #003b1b;
 }
 .Projects_project {
   padding: 3rem;
   margin: 0 auto 2rem;
   border-radius: 1rem;
   background-color: white;
-  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
+  /* box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3); */
 }
 .Projects_project-title {
   padding-bottom: 0.5rem;
-  font-family: "Black Han Sans", sans-serif;
-  font-weight: 400;
+  font-family: "GmarketSansMedium", sans-serif;
+  font-weight: 700;
   font-size: 2.5rem;
   color: #222222;
   text-align: center;
@@ -433,4 +446,45 @@ li {
 .Footer_copyright {
   font-size: 0.9rem;
   color: #f0e6ee;
+}
+
+/* --------------- @media --------------- */
+/* --------------- @media 1109px--------------- */
+@media screen and (max-width: 1109px) {
+  .Home_avatar {
+    display: none;
+  }
+  .Home_title {
+    font-size: 3rem;
+  }
+  .Home_description {
+    font-size: 1rem;
+  }
+
+  .AboutMe_info-wrapper {
+    width: 50%;
+  }
+
+  .Projects_project-info {
+    flex-direction: column;
+  }
+  .Projects_project-img-wrapper {
+    width: 100%;
+  }
+  .Projects_project-descriptions {
+    width: 100%;
+  }
+}
+/* --------------- @media 679px--------------- */
+@media screen and (max-width: 679px) {
+  .AboutMe_info-wrapper {
+    width: 100%;
+  }
+  .Projects_project-label {
+    float: none;
+    width: 100%;
+  }
+  .Projects_project-value {
+    width: 100%;
+  }
 }
