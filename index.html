@@ -9,20 +9,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
-      rel="stylesheet"
-    />
-
     <link rel="stylesheet" href="style.css" />
 
     <title>HJ's Profile</title>
@@ -34,18 +20,29 @@
         <div class="Nav_logo">
           <i class="fas fa-meteor Nav_logo-icon">KHJ's PORTFOLIO</i>
         </div>
+
         <div class="Nav_navbar">
           <div class="Nav_menu aboutMe" data-link="#about-me">ABOUT ME</div>
           <div class="Nav_menu skills" data-link="#skills">SKILLS</div>
           <div class="Nav_menu" data-link="#archiving">ARCHIVING</div>
           <div class="Nav_menu" data-link="#projects">PROJECTS</div>
         </div>
+
+        <div class="Nav_toggle-button">
+          <i class="fas fa-ellipsis-v Nav_toggle-button-icon"></i>
+        </div>
       </div>
     </header>
 
     <article id="home">
       <div class="Home_container Container">
-        <div class="Home_avatar"></div>
+        <div class="Home_avatar">
+          <img
+            src="/images/home-avatar.png"
+            alt="avatar image"
+            class="Home_avatar-img"
+          />
+        </div>
 
         <div class="Home_title">
           강현준
@@ -54,17 +51,11 @@
         </div>
         <!-- <hr class="Home_divider" /> -->
         <div class="Home_description">
-          <!-- 안녕하세요.
-          <br /> -->
           항상 도전하는 프론트엔드 웹 개발자입니다.
           <br />
           멈추지 않고 한걸음씩 나아가려는 성격이 저의 장점입니다.
         </div>
         <div class="Home_nextbtn">더 알아보기</div>
-        <!-- 움직이는 이미지 -->
-        <!-- <div class="Home_img-wrapper">
-          <img class="Home_img" src="/images/homeimage2.png" alt="homeimage" />
-        </div> -->
       </div>
     </article>
 
@@ -161,31 +152,135 @@
         </div>
 
         <div class="Skills_tech-stacks-container">
-          <div class="Skills_tech-stacks">
-            <div class="Skills_stacks-title">FRONTEND</div>
+          <div class="stack-1">
+            <div class="Skills_tech-stacks">
+              <div class="Skills_tech-stacks-title">FRONTEND</div>
 
-            <img
-              src="/images/skills-frontend.png"
-              alt="skills frontend"
-              class="Skills_img"
-            />
-          </div>
-
-          <div class="Skills_tech-stacks">
-            <div class="Skills_stacks-title">DEPLOYMENT</div>
-
-            <div class="Skills_img-wrapper">
-              github-page <br />
-              netlify
+              <div class="wrapper">
+                <div class="Skills_tech-stack-wrapper">
+                  <div class="Skills_tech-stack-img-wrapper">
+                    <img
+                      src="/images/skills-html.png"
+                      alt="skill html"
+                      class="Skills_tech-stack-img"
+                    />
+                  </div>
+                  <div class="Skills_tech-stack-value">HTML</div>
+                </div>
+                <br />
+                <div class="Skills_tech-stack-wrapper">
+                  <div class="Skills_tech-stack-img-wrapper">
+                    <img
+                      src="/images/skills-css.png"
+                      alt="skill css"
+                      class="Skills_tech-stack-img"
+                    />
+                  </div>
+                  <div class="Skills_tech-stack-value">CSS</div>
+                </div>
+                <br />
+                <div class="Skills_tech-stack-wrapper">
+                  <div class="Skills_tech-stack-img-wrapper">
+                    <img
+                      src="/images/skills-js.png"
+                      alt="skills js"
+                      class="Skills_tech-stack-img"
+                    />
+                  </div>
+                  <div class="Skills_tech-stack-value">JS</div>
+                </div>
+                <br />
+                <div class="Skills_tech-stack-wrapper">
+                  <div class="Skills_tech-stack-img-wrapper">
+                    <img
+                      src="/images/skills-react.png"
+                      alt="skill react"
+                      class="Skills_tech-stack-img"
+                    />
+                  </div>
+                  <div class="Skills_tech-stack-value">React</div>
+                </div>
+                <br />
+                <div class="Skills_tech-stack-wrapper">
+                  <div class="Skills_tech-stack-img-wrapper">
+                    <img
+                      src="/images/skills-redux.png"
+                      alt="skill redux"
+                      class="Skills_tech-stack-img"
+                    />
+                  </div>
+                  <div class="Skills_tech-stack-value">Redux</div>
+                </div>
+                <br />
+                <div class="Skills_tech-stack-wrapper">
+                  <div class="Skills_tech-stack-img-wrapper">
+                    <img
+                      src="/images/skills-bootstrap.png"
+                      alt="skill bootstrap"
+                      class="Skills_tech-stack-img"
+                    />
+                  </div>
+                  <div class="Skills_tech-stack-value">Bootstrap</div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="Skills_tech-stacks">
-            <div class="Skills_stacks-title">VERSION CONTROL</div>
+          <div class="stack-2">
+            <div class="Skills_tech-stacks">
+              <div class="Skills_tech-stacks-title">DEPLOYMENT</div>
 
-            <div class="Skills_img-wrapper">
-              git <br />
-              github
+              <div class="wrapper">
+                <div class="Skills_tech-stack-wrapper">
+                  <div class="Skills_tech-stack-img-wrapper">
+                    <img
+                      src="/images/skills-netlify.png"
+                      alt="skill netlify"
+                      class="Skills_tech-stack-img"
+                    />
+                  </div>
+                  <div class="Skills_tech-stack-value">netlify</div>
+                </div>
+                <br />
+                <div class="Skills_tech-stack-wrapper">
+                  <div class="Skills_tech-stack-img-wrapper">
+                    <img
+                      src="images/skills-github.png"
+                      alt="skill github page"
+                      class="Skills_tech-stack-img"
+                    />
+                  </div>
+                  <div class="Skills_tech-stack-value">github-pages</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="Skills_tech-stacks">
+              <div class="Skills_tech-stacks-title">VERSION CONTROL</div>
+
+              <div class="wrapper">
+                <div class="Skills_tech-stack-wrapper">
+                  <div class="Skills_tech-stack-img-wrapper">
+                    <img
+                      src="/images/skills-git.png"
+                      alt="skill git"
+                      class="Skills_tech-stack-img"
+                    />
+                  </div>
+                  <div class="Skills_tech-stack-value">git</div>
+                </div>
+                <br />
+                <div class="Skills_tech-stack-wrapper">
+                  <div class="Skills_tech-stack-img-wrapper">
+                    <img
+                      src="/images/skills-github.png"
+                      alt="skill github"
+                      class="Skills_tech-stack-img"
+                    />
+                  </div>
+                  <div class="Skills_tech-stack-value">github</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -203,7 +298,7 @@
             <div class="Archiving_img-wrapper">
               <img
                 class="Archiving_img"
-                src="/images/Archiving_Github.png"
+                src="/images/archiving-github.png"
                 alt="github logo"
               />
             </div>
@@ -286,7 +381,7 @@
 
                 <div class="Projects_project-description">
                   <div class="Projects_project-label">Deployment</div>
-                  <div class="Projects_project-value">Github-page</div>
+                  <div class="Projects_project-value">Github-pages</div>
                 </div>
               </div>
             </div>
@@ -366,7 +461,7 @@
               <div class="Projects_project-img-wrapper">
                 <img
                   class="Projects_project-img"
-                  src="images/project-main-img.png"
+                  src="images/project-main-img-portfolio.png"
                   alt=""
                 />
               </div>
@@ -412,7 +507,7 @@
 
                 <div class="Projects_project-description">
                   <div class="Projects_project-label">Deployment</div>
-                  <div class="Projects_project-value">Github-page</div>
+                  <div class="Projects_project-value">Github-pages</div>
                 </div>
               </div>
             </div>

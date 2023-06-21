@@ -30,7 +30,8 @@ article {
 .Container {
   width: 80%;
   max-width: 71rem;
-  padding: 8rem 2% 4rem;
+  box-sizing: border-box;
+  padding: 8rem 2rem 4rem;
   margin: 0 auto;
 }
 .SectionTitle {
@@ -45,17 +46,17 @@ article {
   line-height: 1.5;
 }
 
-p {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
 ul {
   padding-left: 1rem;
   margin: 0;
 }
 li {
   margin-bottom: 0.5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 /* --------------- Header --------------- */
@@ -69,7 +70,6 @@ li {
 }
 #nav.nav--dark {
   background-color: rgb(255, 246, 228);
-  /* box-shadow: 0 1px 0.3rem; */
 }
 .Nav_container {
   width: 80%;
@@ -79,13 +79,9 @@ li {
 }
 .Nav_navbar {
   color: rgb(255, 246, 228);
-  /* font-weight: 400; */
   float: right;
 }
 .Nav_navbar.navbar--dark {
-  color: #003b1b;
-}
-.Nav_logo.logo--dark {
   color: #003b1b;
 }
 .Nav_logo {
@@ -93,42 +89,45 @@ li {
   display: inline-block;
   cursor: pointer;
 }
-
+.Nav_logo.logo--dark {
+  color: #003b1b;
+}
 .Nav_logo-icon {
   font-size: 1.6rem;
 }
 .Nav_logo-icon::before {
   padding-right: 0.7rem;
 }
-
 .Nav_menu {
   display: inline-block;
-
   padding: 0 1rem;
   line-height: 1.5rem;
   cursor: pointer;
   transition: 0.3s;
-  /* opacity: 0.8; */
 }
-
 .Nav_menu:hover {
   color: #ffc107;
+  /* font-weight: 400; */
+}
+.Nav_toggle-button {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  top: 1rem;
+  right: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  text-align: center;
+  display: none;
+}
+.Nav_toggle-button-icon {
+  font-size: 1.5rem;
+  padding-top: 0.25rem;
+  color: #3f3f3f;
 }
 
 /* --------------- Home --------------- */
-/* 움직이는 이미지 */
-/* .Home_img-wrapper {
-  animation: up-down 2s infinite ease-in-out alternate;
-}
-
-@keyframes up-down {
-  from {
-    transform: translatey(0px);
-  }
-  to {
-    transform: translatey(-40px);
-  }
-} */
 #home {
   /* background: 
   linear-gradient(
@@ -146,10 +145,10 @@ li {
   border-radius: 50%;
   margin: 3rem auto 4rem;
   background-color: rgb(255, 246, 228);
-  /* background: url("/images/avatar2.jpg") center;
-  background-size: 25rem;
-  transform: scaleX(-1) rotate(-15deg); */
-  /* box-shadow: 10px 10px 70px 8px; */
+}
+.Home_avatar-img {
+  width: 100%;
+  border-radius: 50%;
 }
 .Home_title {
   font-family: "GmarketSansMedium", sans-serif;
@@ -158,12 +157,12 @@ li {
   margin-bottom: 4rem;
   font-weight: 700;
 }
-.Home_divider {
+/* .Home_divider {
   display: block;
   width: 4rem;
   border: 0.15rem solid #f4623a;
   margin: 2rem auto;
-}
+} */
 .Home_description {
   color: rgb(255, 246, 228);
   font-size: 1.25rem;
@@ -242,32 +241,44 @@ li {
 .Skills_tech-stacks-container {
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
 }
 .Skills_tech-stacks {
   width: 17rem;
   padding: 1.5rem;
-  margin: 0 auto 2rem;
+  margin: 0 2rem 2rem;
   border-radius: 1rem;
   background-color: rgb(255, 246, 228);
   /* box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.7); */
 }
-.Skills_stacks-title {
+.Skills_tech-stacks-title {
   margin: 1.5rem 0;
-  padding-bottom: 0.5rem;
-
-  /* border-bottom: 1px solid #ccc; */
   font-size: 1.5rem;
   font-weight: 700;
   color: #003b1b;
 }
-.Skills_img {
-  display: block;
+.wrapper {
+  margin: 0 1.5rem;
+}
+.Skills_tech-stack-wrapper {
+  display: flex;
+  text-align: left;
+}
+.Skills_tech-stack-img-wrapper {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 0.7rem;
+}
+.Skills_tech-stack-img {
   width: 100%;
+}
+.Skills_tech-stack-value {
+  font-size: 1.5rem;
+  align-self: center;
 }
 
 /* --------------- archiving --------------- */
 #archiving {
-  /* background-color: #222222; */
   background-color: rgb(255, 246, 228);
 }
 .Archiving_title {
@@ -473,6 +484,42 @@ li {
   }
   .Projects_project-descriptions {
     width: 100%;
+  }
+}
+/* --------------- @media 990px--------------- */
+@media screen and (max-width: 990px) {
+  .Container {
+    width: 100%;
+    margin: 0;
+  }
+  #nav {
+    background-color: rgb(255, 246, 228);
+  }
+  .Nav_container {
+    width: 100%;
+    margin: 0;
+  }
+  .Nav_logo {
+    display: block;
+    color: #003b1b;
+  }
+  .Nav_navbar {
+    display: none;
+    float: none;
+    margin-top: 1.25rem;
+  }
+  .Nav_navbar.open {
+    display: block;
+  }
+  .Nav_menu {
+    display: block;
+    padding: 1.25rem 0;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #003b1b;
+  }
+  .Nav_toggle-button {
+    display: block;
   }
 }
 /* --------------- @media 679px--------------- */

@@ -1,6 +1,6 @@
 // 새로고침 시 스크롤을 top : 0 위치로 이동
-history.scrollRestoration = "auto";
 // history.scrollRestoration = "manual";
+history.scrollRestoration = "auto";
 
 // scroll시 navbar background color 변경
 const header = document.querySelector("#nav");
@@ -17,6 +17,16 @@ document.addEventListener("scroll", () => {
     navLogo.classList.remove("logo--dark");
     navMenu.classList.remove("navbar--dark");
   }
+});
+
+// nav toggle button 클릭 시 nav menu가 내려옴
+const navTogglebtn = document.querySelector(".Nav_toggle-button");
+navTogglebtn.addEventListener("click", () => {
+  navMenu.classList.toggle("open");
+});
+// menu 클릭 시 nav menu 올라감
+navMenu.addEventListener("click", () => {
+  navMenu.classList.remove("open");
 });
 
 // logo 클릭 시 페이지 최상단으로 이동
