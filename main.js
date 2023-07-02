@@ -6,7 +6,7 @@ history.scrollRestoration = "auto";
 const header = document.querySelector("#nav");
 const navLogo = document.querySelector(".Nav_logo");
 const navMenu = document.querySelector(".Nav_navbar");
-const headerHeight = header.getBoundingClientRect().height - 10;
+const headerHeight = header.getBoundingClientRect().height;
 document.addEventListener("scroll", () => {
   if (window.scrollY > headerHeight) {
     header.classList.add("nav--dark");
