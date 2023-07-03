@@ -364,6 +364,7 @@ p {
   padding-bottom: 1rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid #ccc;
+  font-size: 1.1rem;
 }
 .Projects_project-description {
   margin-bottom: 1rem;
@@ -476,6 +477,9 @@ p {
     width: 50%;
   }
 
+  .Projects_project-img-wrapper {
+    margin: 0 0 3rem;
+  }
   .Projects_project-info {
     flex-direction: column;
   }
