@@ -504,7 +504,7 @@ p {
     margin: 0;
   }
   .Nav_logo {
-    display: block;
+    display: inline-block;
     color: #003b1b;
   }
   .Nav_navbar {
